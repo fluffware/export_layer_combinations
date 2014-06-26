@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Export combinations of layers</_name>
+  <id>se.fluffware.inkscape.export_layer_combinations</id>
+  <dependency type="executable" location="extensions">export_layer_combinations.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <dependency type="executable" location="extensions">simplestyle.py</dependency>
+
+  <param name="prefix" type="string" _gui-text="Filename prefix">layers</param>
+  <param name="suffix" type="string" _gui-text="Filename suffix">.png</param>
+  <param name="sizes" type="string" _gui-text="Sizes"></param>
+
+  <effect needs-live-preview="false" >
+    <object-type>all</object-type>
+    <effects-menu>
+       <submenu _name="Layer"/>
+    </effects-menu>
+  </effect>
+
+  <script>
+    <command reldir="extensions" interpreter="python">export_layer_combinations.py</command>
+  </script>
+</inkscape-extension>
